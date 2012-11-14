@@ -1,2 +1,4 @@
 DBSetupTest
 ===========
+
+Spring Petclinic + DBSetup
