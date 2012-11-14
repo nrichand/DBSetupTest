@@ -2,11 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.springframework.samples</groupId>
-	<artifactId>org.springframework.samples.petclinic</artifactId>
-	<name>petclinic</name>
+	
+	<groupId>fr.xebia.test</groupId>
+	<artifactId>dbSetupTest</artifactId>
 	<packaging>war</packaging>
 	<version>1.0.0-SNAPSHOT</version>
+	
 	<properties>
 		<spring.version>3.0.0.RELEASE</spring.version>
 		<slf4j.version>1.5.6</slf4j.version>
@@ -224,12 +225,6 @@
 
 		<!-- Test dependencies -->
 		<dependency>
-			<groupId>org.junit</groupId>
-			<artifactId>com.springsource.org.junit</artifactId>
-			<version>4.7.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>org.springframework.test</artifactId>
 			<version>${spring.version}</version>
@@ -272,8 +267,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<verbose>true</verbose>
-					<source>1.5</source>
-					<target>1.5</target>
+					<source>1.6</source>
+					<target>1.6</target>
 					<showWarnings>true</showWarnings>
 				</configuration>
 			</plugin>
