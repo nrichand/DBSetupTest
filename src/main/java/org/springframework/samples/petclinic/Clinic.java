@@ -82,4 +82,7 @@ public interface Clinic {
 	 */
 	void deletePet(int id) throws DataAccessException;
 
+
+	Collection<Specialty> getSpecialties();
+
 }

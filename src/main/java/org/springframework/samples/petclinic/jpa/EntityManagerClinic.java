@@ -63,6 +63,15 @@ public class EntityManagerClinic implements Clinic {
 		query.setParameter("name", name + "%");
 		return query.getResultList();
 	}
+	
+	@Transactional(readOnly = true)
+	@SuppressWarnings("unchecked")
+	@Override
+	public Collection<Specialty> getSpecialties() {
+		Query query = this.em.createQuery("SELECT s FROM Specialty s");
+		return query.getResultList();
+	}
+	
 
 	@Transactional(readOnly = true)
 	public Owner loadOwner(int id) {

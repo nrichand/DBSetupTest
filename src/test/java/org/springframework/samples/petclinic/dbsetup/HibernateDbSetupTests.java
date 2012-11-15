@@ -1,12 +1,12 @@
 package org.springframework.samples.petclinic.dbsetup;
 
 import static com.ninja_squad.dbsetup.Operations.sequenceOf;
+import static org.fest.assertions.Assertions.assertThat;
 
 import java.util.Collection;
 
 import javax.sql.DataSource;
 
-import org.fest.assertions.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,6 @@ import com.ninja_squad.dbsetup.operation.Operation;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {
-		//"classpath:org/springframework/samples/petclinic/AbstractClinicTests-context.xml",
 		"classpath:org/springframework/samples/petclinic/jpa/applicationContext-entityManager.xml",
 		"classpath:org/springframework/samples/petclinic/jpa/applicationContext-hibernateAdapter.xml",
 		"classpath:org/springframework/samples/petclinic/jpa/applicationContext-jpaCommon.xml"
@@ -57,10 +56,10 @@ public class HibernateDbSetupTests {
 	@Test
 	public void should_work() {
 		// When
-		Collection<Specialty> specialty = dao.findSpecialty("Nat");
+		Collection<Specialty> specialties = dao.getSpecialties();
 		
 		// Then
-		Assertions.assertThat( specialty).isNotNull();
+		assertThat(specialties).isNotEmpty().hasSize(2);
 	}
 	
 }
