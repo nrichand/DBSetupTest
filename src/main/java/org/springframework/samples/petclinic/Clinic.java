@@ -16,6 +16,9 @@ import org.springframework.dao.DataAccessException;
  */
 public interface Clinic {
 
+	Collection<Specialty> findSpecialty(String name);
+
+	
 	/**
 	 * Retrieve all <code>Vet</code>s from the data store.
 	 * @return a <code>Collection</code> of <code>Vet</code>s
