@@ -1,4 +1,4 @@
 DBSetupTest
 ===========
 
-Spring Petclinic + DBSetup
+Spring Petclinic + [DBSetup](http://dbsetup.ninja-squad.com/)
